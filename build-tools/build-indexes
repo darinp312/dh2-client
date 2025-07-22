@@ -15,7 +15,6 @@ process.stdout.write("Syncing data from Git repository... ");
 if (!fs.existsSync('./caches/DH2')) {
 	child_process.execSync('git clone C:/dev/delta_showdown_mod/dh2-client/caches/DH2', {
 	});
-	child_process.execSync("git pull " + server_repo, {cwd: 'caches/DH2'});
 }
 
 child_process.execSync('npm run build', {cwd: 'caches/DH2'});
